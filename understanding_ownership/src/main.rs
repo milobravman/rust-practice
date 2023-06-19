@@ -8,5 +8,22 @@ fn main() {
 
     // need to add example on references and borrowing
 
-    // need add example on ownership errors
+    // example on ownership errors Referencing out of a collection
+    let first: Vec<String> = vec![String::from("hello world")];
+    let s_ref: &String = &first[0];
+    println!("{s_ref}");
+    //let s: String = *s_ref; this line will not work because the heap will get freed twice
+
+
+    // manipulating arrays and seeing how & and * work
+    // keeping track of permissions and when to use & and * is really confusing
+    let mut point = [0, 1];
+    let mut x = point[0];
+    let y = &mut point[1];
+    x += 1;
+    *y += 1;
+    println!("{} {} {}", point[0], point[1], x);
+
+
+
 }
