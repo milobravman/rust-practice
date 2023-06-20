@@ -11,5 +11,12 @@ fn main() {
     //     width * height
     // }
 
-    
+    let rect = (30, 50);
+
+    println!("the area of the rectangle is {}", area(rect));
+
+
+    fn area (dimensions: (u32, u32)) -> u32{
+        dimensions.0 * dimensions.1
+    }
 }
