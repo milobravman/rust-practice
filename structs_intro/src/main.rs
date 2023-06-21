@@ -69,4 +69,12 @@ fn main() {
         fn area(&self) -> i32 {
             self.width*self.height
         }
+
+        fn square(size: i32) -> Self {
+            Self {
+                width: size,
+                height: size,
+            }
+        }
+    
     }
